@@ -1,9 +1,9 @@
 ---
-title: "Open Source Software"
+title: "Open Source Software Lol"
 date: 2023-05-23T18:00:43+06:00
 draft: false
 layout: opensource
 keywords: "tech, programming, SEO"
 ---
 
-My Open Soft Software on Github
+My Open Soft Software on Github lol projects

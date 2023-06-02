@@ -2,6 +2,17 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Brian's Portfolio"
 theme = "basic"
+disqusShortname = "build-websites-with-hugo"
+pygmentsUseClasses = true
+[permalinks]
+ posts = "posts/:year/:month/:slug/"
+ year = "/posts/:slug/"
+ month = "/posts/:slug/"
+[taxonomies]
+ year = "year"
+ month = "month"
+ tag = "tags"
+ category = "categories"
 [params]
  author = "Brian Hogan"
  description = "My portfolio site"

@@ -1,33 +1,31 @@
 {{ define "main" }}
-<div class="project-container">
-  <section class="project-list">
-    <h2>Projects</h2>
-    <ul>
-      {{ range (where .Site.RegularPages "Type" "in" "projects").ByDate.Reverse
-      }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </section>
+  <div class="project-container">
+    <section class="project-list">
+      <h2>Projects</h2>
+      <ul>
+        {{ range (where .Site.RegularPages "Type" "in" "projects").ByDate.Reverse }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
 
-  <section class="project">
-    <h2>{{ .Title }}</h2>
+    <section class="project">
+      <h2>{{ .Title }}</h2>
 
-    {{ .Content }}
+      {{ .Content }}
 
-    <img src="{{ .Params.image }}" alt="{{ .Params.alt_text }}" />
 
-    <h3>Tech Used</h3>
-    <ul>
-      {{ range .Params.tech_used }}
+      <img src="{{ .Params.image }}" alt="{{ .Params.alt_text }}" />
 
-      <li>{{ . }}</li>
+      <h3>Tech Used</h3>
+      <ul>
+        {{ range .Params.tech_used }}
 
-      {{ end }}
-    </ul>
-  </section>
-</div>
-
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </section>
+  </div>
 {{ end }}
