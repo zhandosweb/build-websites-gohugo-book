@@ -1,26 +1,22 @@
-{{ define "main" }}
-  {{ .Content }}
+{{ define "main" }} {{ .Content }}
 
+<h3>My latest project:</h3>
+<ul>
+  {{ range first 1 (where .Site.RegularPages "Type" "in"
+  "projects").ByDate.Reverse }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
 
-  <h3>My latest project:</h3>
-  <ul>
-    {{ range first 1 (where .Site.RegularPages "Type" "in"
-      "projects").ByDate.Reverse
-    }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-    {{ end }}
-  </ul>
-
-  <h3>Latest articles on blog</h3>
-  <ul>
-    {{ range first 2 (where .Site.RegularPages "Type" "in"
-      "posts").ByDate.Reverse
-    }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-    {{ end }}
-  </ul>
+<h3>Latest articles on blog</h3>
+<ul>
+  {{ range first 2 (where .Site.RegularPages "Type" "in" "posts").ByDate.Reverse
+  }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
 {{ end }}
