@@ -13,6 +13,7 @@ year: "2023"
 month: "2023/06"
 keywords: 
 - jabberwocky
+heroImage: heroimg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

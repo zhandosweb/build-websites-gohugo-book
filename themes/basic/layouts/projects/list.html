@@ -1,23 +1,24 @@
 {{ define "main" }}
+  <h2>{{ .Title }}</h2>
 
-<h2>{{ .Title }}</h2>
+  {{ .Content }}
 
-{{ .Content }}
 
-<section class="project">
-  {{ with .Site.GetPage "/opensource.md" }}
-  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-  <p>{{ .Summary }}</p>
-  {{ end }}
-</section>
-
-<section class="projects">
-  {{ range .Pages }}
   <section class="project">
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <p>{{ .Params.Summary }}</p>
+    {{ with .Site.GetPage "/opensource.md" }}
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Summary }}</p>
+    {{ end }}
   </section>
-  {{ end }}
-</section>
 
+  <section class="projects">
+    {{ range (.Paginator 2).Pages }}
+      <section class="project">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Params.Summary }}</p>
+      </section>
+    {{ end }}
+    {{ template "_internal/pagination.html" . }}
+
+  </section>
 {{ end }}

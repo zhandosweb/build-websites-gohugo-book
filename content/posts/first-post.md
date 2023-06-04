@@ -12,6 +12,7 @@ tags:
  - Software
  - Html
 disableComments: true
+heroImage: 640x150
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

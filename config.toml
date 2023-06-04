@@ -8,6 +8,8 @@ pygmentsUseClasses = true
  posts = "posts/:year/:month/:slug/"
  year = "/posts/:slug/"
  month = "/posts/:slug/"
+ tag = "/tags/:slug/"
+ category = "/categories/:slug/"
 [taxonomies]
  year = "year"
  month = "month"

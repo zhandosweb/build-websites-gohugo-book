@@ -3,8 +3,10 @@
     <h3>
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h3>
+    <img src="{{ relURL "/" }}images/{{ .Params.heroImage }}.png" alt="" />
     <time>
-      {{ .Date | dateFormat "January" }} {{ .Date | dateFormat "2" }}
+      {{ .Date | dateFormat "January" }}
+      {{ .Date | dateFormat "2" }}
     </time>
   </header>
 
