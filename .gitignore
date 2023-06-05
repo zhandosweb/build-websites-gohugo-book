@@ -3,6 +3,8 @@
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json
+
+# Node Modules Ignore
 node_modules
 
 # Executable may be added to repository
