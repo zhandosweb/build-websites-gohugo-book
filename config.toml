@@ -21,3 +21,7 @@ pygmentsUseClasses = true
  googleAnalytics = "UA-12345678"
  gh_url = "https://api.github.com/users"
  gh_user = "zhandosweb"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
