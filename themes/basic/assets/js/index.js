@@ -12,6 +12,8 @@ window.SearchApp = {
   searchIndex: {},
 };
 
+// Some Comment
+
 axios.get("/search/index.json").then((response) => {
   SearchApp.searchData = response.data;
   SearchApp.searchIndex = lunr(function () {
