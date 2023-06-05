@@ -1,4 +1,11 @@
 <footer>
   <small>Copyright {{now.Format "2006"}} {{ .Site.Params.author }}.</small>
   {{- partial "social.html" . -}}
+  <p>
+    Powered by <br />
+    <a href="#"
+      ><img src="{{ "images/logo.png" | relURL }}" height="38" width="128"
+      alt="" /></a
+    >
+  </p>
 </footer>
